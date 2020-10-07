@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfChat="clr-namespace:Syncfusion.XForms.Chat;assembly=Syncfusion.SfChat.XForms"
+             xmlns:local="clr-namespace:SyncfusionChatUI.ViewModels" xmlns:syncTheme="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms" xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+             x:Class="SyncfusionChatUI.Views.FakeChatPage">
+    
+    <ContentPage.BindingContext>
+        <local:FakeChatViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                    <Color x:Key="SfChatMessageInputViewBackgroundColor">lightBlue</Color>
+                    <!--Incoming styles -->
+                    <Color x:Key="SfChatIncomingMessageTextColor">Gray</Color>
+                    <Color x:Key="SfChatIncomingMessageTimestampTextColor">White</Color>
+                    <Color x:Key="SfChatIncomingMessageAuthorTextColor">white</Color>
+                    <Color x:Key="SfChatIncomingMessageBackgroundColor">DarkRed</Color>
+                    <x:String x:Key="SfChatIncomingMessageFontFamily">Roboto-Medium</x:String>
+                    <FontAttributes x:Key="SfChatIncomingMessageFontAttributes">Italic</FontAttributes>
+                    <x:Double x:Key="SfChatIncomingMessageFontSize">16</x:Double>
+                    <x:String x:Key="SfChatIncomingMessageAuthorFontFamily">Roboto-Medium</x:String>
+                    <FontAttributes x:Key="SfChatIncomingMessageAuthorFontAttributes">Italic</FontAttributes>
+                    <x:Double x:Key="SfChatIncomingMessageAuthorFontSize">16</x:Double>
+                    <x:String x:Key="SfChatIncomingMessageTimestampFontFamily">Roboto-Medium</x:String>
+                    <FontAttributes x:Key="SfChatIncomingMessageTimestampFontAttributes">Italic</FontAttributes>
+                    <x:Double x:Key="SfChatIncomingMessageTimestampFontSize">16</x:Double>
+
+                    <!--Outgoing styles-->
+                    <Color x:Key="SyncPrimaryForegroundColor">blue</Color>
+                    <Color x:Key="SyncPrimaryColor">white</Color>
+                    <Color x:Key="SfChatOutgoingMessageTimestampTextColor">gray</Color>
+                    <Color x:Key="SfChatOutgoingMessageAuthorTextColor">Gray</Color>
+                    <x:String x:Key="SfChatOutgoingMessageFontFamily">Roboto-Medium</x:String>
+                    <FontAttributes x:Key="SfChatOutgoingMessageFontAttributes">Italic</FontAttributes>
+                    <x:Double x:Key="SfChatOutgoingMessageFontSize">16</x:Double>
+                    <x:String x:Key="SfChatOutgoingingMessageAuthorFontFamily">Roboto-Medium</x:String>
+                    <FontAttributes x:Key="SfChatOutgoingMessageAuthorFontAttributes">Italic</FontAttributes>
+                    <x:Double x:Key="SfChatOutgoingMessageAuthorFontSize">16</x:Double>
+                    <x:String x:Key="SfChatOutgoingMessageTimestampFontFamily">Roboto-Medium</x:String>
+                    <FontAttributes x:Key="SfChatOutgoingMessageTimestampFontAttributes">Italic</FontAttributes>
+                    <x:Double x:Key="SfChatOutgoingMessageTimestampFontSize">16</x:Double>
+
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            
+
+            <sfChat:SfChat x:Name="sfChat"   
+                           BackgroundColor="LightSkyBlue"
+                           Messages="{Binding Messages}"
+                           CurrentUser="{Binding CurrentUser}"
+                           ShowOutgoingMessageAvatar="True" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

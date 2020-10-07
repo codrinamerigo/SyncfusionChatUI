@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SyncfusionChatUI.Views.HomePage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Button
+            Margin="55,0,55,0"
+            BackgroundColor="white"
+            BorderColor="DarkRed"
+            BorderWidth="1"
+            Clicked="myBotWebViewPageButton_Clicked"
+            Text="Web Chat Bot"
+            TextColor="DarkRed" />
+
+            <Button
+            Margin="55,30,55,0"
+            BackgroundColor="white"
+            BorderColor="DarkRed"
+            BorderWidth="1"
+            Clicked="CustomBotPageButton_Clicked"
+            Text="Direct Line Bot"
+            TextColor="DarkRed" />
+
+            <Button
+            Margin="55,30,55,0"
+            BackgroundColor="white"
+            BorderColor="DarkRed"
+            BorderWidth="1"
+            Clicked="FakeChatPageButton_Clicked"
+            Text="Fake Chat Bot"
+            TextColor="DarkRed" />
+
+            <Button
+            Margin="55,30,55,0"
+            BackgroundColor="white"
+            BorderColor="DarkRed"
+            BorderWidth="1"
+            Clicked="ComplexChatButton_Clicked"
+            Text="Complex Chat Bot"
+            TextColor="DarkRed" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

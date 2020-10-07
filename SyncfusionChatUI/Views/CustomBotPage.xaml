@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SyncfusionChatUI.Views.CustomBotPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sfChat="clr-namespace:Syncfusion.XForms.Chat;assembly=Syncfusion.SfChat.XForms"
+    mc:Ignorable="d">
+
+    <ContentPage.Content>
+        <Grid>
+
+            <Grid
+                Margin="10,70,0,0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Start" />
+            <!--<sfChat:SfChat x:Name="sfChat"
+                           Messages="{Binding Messages}"
+                           CurrentUser="{Binding CurrentUser}"                   
+                           ShowOutgoingMessageAvatar="True"
+                           SendMessageCommand="{Binding SendMessageCommand}"/>-->
+
+            <StackLayout
+                Margin="0,40,0,0"
+                HorizontalOptions="FillAndExpand"
+                Orientation="Vertical"
+                VerticalOptions="FillAndExpand">
+
+                <ListView
+                    Margin="10"
+                    HasUnevenRows="True"
+                    IsPullToRefreshEnabled="True"
+                    IsRefreshing="{Binding IsRefreshing}"
+                    ItemsSource="{Binding Messages}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="0,15,0,15">
+                                    <StackLayout
+                                        Margin="50,0,0,0"
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="Start">
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="12"
+                                            HorizontalOptions="FillAndExpand"
+                                            Text="{Binding FromUser}"
+                                            TextColor="DarkRed"
+                                            VerticalOptions="Center" />
+                                    </StackLayout>
+
+                                    <StackLayout
+                                        Margin="20,25,0,0"
+                                        Padding="15,15,15,15"
+                                        BackgroundColor="White"
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="Start">
+
+                                        <Label
+                                            FontSize="18"
+                                            HorizontalOptions="FillAndExpand"
+                                            Text="{Binding Message}"
+                                            TextColor="Gray"
+                                            VerticalOptions="Center" />
+
+                                    </StackLayout>
+
+                                    <Image
+                                        Aspect="AspectFit"
+                                        HeightRequest="40"
+                                        HorizontalOptions="Start"
+                                        Source="{Binding UserImageUrl}"
+                                        VerticalOptions="Start" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <StackLayout
+                    Margin="20,10,20,30"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="End">
+                    <StackLayout Spacing="0" VerticalOptions="Start">
+                        <StackLayout Orientation="Horizontal">
+                            <Entry
+                                FontSize="16"
+                                HorizontalOptions="FillAndExpand"
+                                Placeholder="Please enter your message..."
+                                PlaceholderColor="Gray"
+                                Text="{Binding TextMessage}"
+                                TextColor="DarkRed" />
+                        </StackLayout>
+
+
+                    </StackLayout>
+                    <Button
+                        BackgroundColor="DarkRed"
+                        Command="{Binding SendMessageCommand}"
+                        FontSize="23"
+                        Text="Send"
+                        TextColor="White" />
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

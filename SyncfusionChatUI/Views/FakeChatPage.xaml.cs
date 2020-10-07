@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SyncfusionChatUI.ViewModels;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace SyncfusionChatUI.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class FakeChatPage : ContentPage
     {
-        public LoginPage()
+        public FakeChatPage()
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

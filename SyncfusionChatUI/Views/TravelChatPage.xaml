@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SyncfusionChatUI.ViewModels" xmlns:sfChat="clr-namespace:Syncfusion.XForms.Chat;assembly=Syncfusion.SfChat.XForms"
+             x:Class="SyncfusionChatUI.Views.TravelChatPage">
+
+    <ContentPage.BindingContext>
+        <local:TravelChatViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                           Messages="{Binding Messages}"
+                           CurrentUser="{Binding CurrentUser}"
+                           ShowOutgoingMessageAvatar="True" 
+                           SendMessageCommand="{Binding SendMessageCommand}"/>
+    </ContentPage.Content>
+</ContentPage>
