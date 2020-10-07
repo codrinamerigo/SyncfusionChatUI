@@ -4,9 +4,11 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sfChat="clr-namespace:Syncfusion.XForms.Chat;assembly=Syncfusion.SfChat.XForms"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sfChat="clr-namespace:Syncfusion.XForms.Chat;assembly=Syncfusion.SfChat.XForms" xmlns:local="clr-namespace:SyncfusionChatUI.ViewModels"
     mc:Ignorable="d">
-
+    <ContentPage.BindingContext>
+        <local:BotViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <Grid>
 

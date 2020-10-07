@@ -20,8 +20,6 @@ namespace SyncfusionChatUI.Views
         {
             InitializeComponent();
 
-            ViewModel = new BotSfViewModel();
-            BindingContext = ViewModel;
         }
     }
 }
