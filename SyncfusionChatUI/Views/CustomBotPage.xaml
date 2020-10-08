@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sfChat="clr-namespace:Syncfusion.XForms.Chat;assembly=Syncfusion.SfChat.XForms" xmlns:local="clr-namespace:SyncfusionChatUI.ViewModels"
     mc:Ignorable="d">
     <ContentPage.BindingContext>
-        <local:BotViewModel/>
+        <local:BotSfViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <Grid>
@@ -16,13 +16,13 @@
                 Margin="10,70,0,0"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="Start" />
-            <!--<sfChat:SfChat x:Name="sfChat"
+            <sfChat:SfChat x:Name="sfChat"
                            Messages="{Binding Messages}"
                            CurrentUser="{Binding CurrentUser}"                   
                            ShowOutgoingMessageAvatar="True"
-                           SendMessageCommand="{Binding SendMessageCommand}"/>-->
+                           SendMessageCommand="{Binding SendMessageCommand}"/>
 
-            <StackLayout
+            <!--<StackLayout
                 Margin="0,40,0,0"
                 HorizontalOptions="FillAndExpand"
                 Orientation="Vertical"
@@ -103,7 +103,7 @@
                         Text="Send"
                         TextColor="White" />
                 </StackLayout>
-            </StackLayout>
+            </StackLayout>-->
         </Grid>
     </ContentPage.Content>
 </ContentPage>

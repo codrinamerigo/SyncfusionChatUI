@@ -8,12 +8,12 @@ namespace SyncfusionChatUI
     {
         public static string WebChatBot
         {
-            get => "WFA8hwHUBv0.D-lZ2o5HSEmiPHiluMUCe2tvcUxoDlcdCwRs8EXF9sw";
+            get => "add azure web chat key";
 
         }
         public static string DirectLineBot
         {
-            get => "rP7HEHxWw3w.JDqm4TpeUqiqKEyIgzKEKpu2ZwTB6ctq9zNSG-ZCZuw";
+            get => "add aure direct line key";
 
         }
 

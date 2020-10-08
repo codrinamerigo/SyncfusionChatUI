@@ -11,8 +11,7 @@ namespace SyncfusionChatUI
 
         public App()
         {
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzMwNDk0QDMxMzgyZTMzMmUzMEpsVktqR0ZvY05yZ3RWdUVZUWJCN2g3SGVVaUVyYldOK0IrRm01N0tUWm89");
-
+            
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
